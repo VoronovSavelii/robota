@@ -19,6 +19,10 @@ def dec2bin(value):
     return [int(element) for element in bin(value)[2:].zfill(8)]
 
 while True:
+    if GPIO.input(up) and GPIO.input(down):
+        num = 255
+        time.sleep(0.2)
+        
     if GPIO.input(up):
         if (num < 255):
             num = num + 1
