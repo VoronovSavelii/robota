@@ -4,6 +4,10 @@ import time
 GPIO.setmode(GPIO.BCM)
 
 leds = [24, 22, 23, 27, 17, 25, 12, 16]
+#zalypa = [24, 22, 23, 27, 17, 25, 12, 16]
+#hren = reversed(zalypa)
+#leds = [int(x) for x in hren]
+
 up = 9
 down = 10
 
@@ -22,7 +26,7 @@ while True:
     if GPIO.input(up) and GPIO.input(down):
         num = 255
         time.sleep(0.2)
-        
+
     if GPIO.input(up):
         if (num < 255):
             num = num + 1
