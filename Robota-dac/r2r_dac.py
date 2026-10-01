@@ -34,7 +34,7 @@ class R2R_DAC:
         self.set_number(number)
 
         # if self.verbose:
-        #     binary_str = format(number, '08b')
+        #     binary_str = bin(number)[2:0].zfill(8)
         #     bits_list = [int(bit) for bit in binary_str]
 
 if __name__ == "__main__":
